@@ -6,3 +6,5 @@ def about (request):
 def home (request) :
     #return HttpResponse("This is a homepage")
     return render(request,'home.html')
+def makeMoney (request) :
+    return render (request,'makeMoney.html')
