@@ -7,14 +7,16 @@
     <title>FFS</title>
 </head>
 <body>
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark ">
-    <a href="?#" class="navbar-brand">dafnow.com</a>
+
+ <nav class="navbar navbar-expand-sm navbar-dark bg-dark ">
+    <a href="#" class="navbar-brand">dafnow.com</a>
     <button class="navbar-toggler">
       <span class="navbar-toggler-icon" data-toggle ="collapse" data-target="#navbarmenu">
 
       </span>
     </button>
-    <div class="collapse navbar-collapse", id ="navbarmenu">
+    <div class="collapse navbar-collapse", id ="navbarmenu",>
+
       <ul class ="navbar-nav mr-auto">
         <li class="nav-item">
           <a href="#" class="nav-link">Customer Care</a>
@@ -22,13 +24,22 @@
         <li class="nav-item">
           <a href="#" class="nav-link">Make Money With Us</a>
         </li>
-          </li>
+		  </li>
+		{% if user.is_authenticated %}
+		<li class="nav-item">
+			<a class="nav-link">Helllo , {{user.first_name}} </a>
+		</li></li>
+		<li class="nav-item">
+			<a href="ac/logout" class="nav-link">LOG OUT</a>
+		</li></li>
+		{% else %}
         <li class="nav-item">
-          <a href="#" class="nav-link">LOG IN</a>
+          <a href="ac/login" class="nav-link">LOG IN</a>
         </li></li>
         <li class="nav-item">
-          <a href="#" class="nav-link">SIGN UP</a>
-        </li>
+          <a href="ac/reg" class="nav-link">SIGN UP</a>
+		</li>
+		{% endif %}
         <!-- Search form -->
         <ul class="navbar-nav mr-right">
             <div class="md-form mt-0">
@@ -41,7 +52,8 @@
 
   </nav>
    <nav class="navbar navbar-expand-sm navbar-dark bg-dark ">
-      <a href="?#" class="navbar-brand">Directly Alternative Food Now!</a>
+      <a href="?#" class="navbar-brand">Stats will be shown here </a>
+      <a href="?#" class="navbar-brand mr right" >Special feature  </a>
 
 
    </nav>
