@@ -8,11 +8,11 @@
 </head>
 <body>
 
- <nav class="navbar navbar-expand-sm navbar-dark bg-dark ">
-    <a href="#" class="navbar-brand">dafnow.com</a>
+
+ <nav class="navbar navbar-expand-sm navbar-dark bg-secondary " id ="navbarfixed">
+    <a href="?#" class="navbar-brand">dafnow.com</a>
     <button class="navbar-toggler">
       <span class="navbar-toggler-icon" data-toggle ="collapse" data-target="#navbarmenu">
-
       </span>
     </button>
     <div class="collapse navbar-collapse", id ="navbarmenu",>
@@ -22,24 +22,26 @@
           <a href="#" class="nav-link">Customer Care</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">Make Money With Us</a>
+          <a href="mm" class="nav-link">Make Money With Us</a>
         </li>
-		  </li>
 		{% if user.is_authenticated %}
 		<li class="nav-item">
-			<a class="nav-link">Helllo , {{user.first_name}} </a>
+			<a class="nav-link" href="mm/ac/myprofile">See Profile :  {{user.first_name}} </a>
 		</li></li>
 		<li class="nav-item">
-			<a href="ac/logout" class="nav-link">LOG OUT</a>
+			<a href="mm/ac/logout" class="nav-link">LOG OUT</a>
 		</li></li>
 		{% else %}
         <li class="nav-item">
-          <a href="ac/login" class="nav-link">LOG IN</a>
+          <a href="mm/ac/login" class="nav-link">LOG IN</a>
         </li></li>
         <li class="nav-item">
-          <a href="ac/reg" class="nav-link">SIGN UP</a>
+          <a href="mm/ac/reg" class="nav-link">SIGN UP</a>
 		</li>
 		{% endif %}
+          <li class="nav-item">
+          <a href="mm/swp/allstores" class="nav-link">See all stores</a>
+        </li>
         <!-- Search form -->
         <ul class="navbar-nav mr-right">
             <div class="md-form mt-0">
@@ -54,9 +56,13 @@
    <nav class="navbar navbar-expand-sm navbar-dark bg-dark ">
       <a href="?#" class="navbar-brand">Stats will be shown here </a>
       <a href="?#" class="navbar-brand mr right" >Special feature  </a>
-
-
    </nav>
+
+
+<!--plans start from here-->
+
+
+
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
