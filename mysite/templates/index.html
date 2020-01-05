@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -59,7 +60,71 @@
    </nav>
 
 
-<!--plans start from here-->
+<!--slider starts from here-->
+<style type="text/css">
+
+  #slider {
+    overflow: hidden;
+  }
+  #slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+  }
+  #slider figure img {
+    width: 20%;
+    float: left;
+  }
+
+  @keyframes slider {
+    0% {
+      left: 0;
+    }
+    20% {
+      left: 0;
+    }
+    25% {
+      left: -100%;
+    }
+    45% {
+      left: -100%;
+    }
+    50% {
+      left: -200%;
+    }
+    70% {
+      left: -200%;
+    }
+    75% {
+      left: -300%;
+    }
+    95% {
+      left: -300%;
+    }
+    100% {
+      left: -400%;
+    }
+  }
+
+  </style>
+  </head>
+  <body>
+
+    <div id="slider"  >
+      <figure>
+        <img alt="img0 being slided"src="{% static 'home/img/0.png' %}">
+        <img alt="img1 being slided" src="{% static 'home/img/1.png' %}">
+        <img alt="img2 being slided" src="{% static 'home/img/2.png' %}">
+        <img alt="img3 being slided"src="{% static 'home/img/3.png' %}">
+        <img alt="img4 being slided"src="{% static 'home/img/4.png' %}">
+      </figure>
+    </div>
+
+
+
+  </body>
 
 
 
