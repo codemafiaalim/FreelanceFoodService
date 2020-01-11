@@ -1,0 +1,34 @@
+{% load static %}
+<body>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <h1 text-align: center>Your stores</h1>
+          
+    {% for st in stores %}
+    <!-- Destination -->
+    <div class="destination item" style="width:300px;">
+        {% if st.covImg %}
+        <div class="destination_image">
+            <img   src="{{st.covImg.url}}"  alt="No Image " style="width:100px;height:100px;">
+        </div>
+        {% else %}
+        <div class="destination_image">
+            <img   src="{% static 'store/default.png' %}"  alt="No Image " style="width:100px;height:100px;">
+        </div>
+        {% endif %}
+        <div class="planination_content">
+            <div class="planination_title"><a href="stores2.html">{{st.title}}</a></div>
+            <div class="planination_subtitle">
+                <h1>{{st.name}}</h1>
+            </div>
+            <div class="planination_price">Location :  {{st.location}}</div>
+            </div>
+        </div>
+        <div class="planination_price">Rating :  {{st.rating}} ⭐</div>
+        </div>
+    </div>
+    {% endfor %}
+
+
+</html>
+</body>
