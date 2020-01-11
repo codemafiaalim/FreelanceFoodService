@@ -33,7 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'mysite',
     'accounts',
-    'StoresAndPlans',
+    'Stores',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -58,8 +58,9 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates'
                     ,
-        'DIRS': ['templates','accounts/templates',
-                 'StoresAndPlans/templates'],
+        'DIRS': ['templates',
+                 'accounts/templates',
+                 'Stores/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

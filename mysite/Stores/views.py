@@ -19,7 +19,7 @@ def createStore(request):
             return redirect('/')
     else:
         form = forms.StoreForm()
-    return render(request, 'pic.html', {'form': form})
+    return render(request, 'create.html', {'form': form})
 
 
 # Create your views here.

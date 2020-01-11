@@ -8,12 +8,12 @@ urlpatterns = [
     #Durjoy
 
     path('admin/', admin.site.urls),
-    #path('',include('stores2.urls')),
-    path('mm/swp/',include('StoresAndPlans.urls')),
-    path('mm/ac/',include('accounts.urls') ),
-    path('mm/',views.makemoney),
-    path('',views.home),
-
+    path('mm/st/', include('Stores.urls')),
+    path('mm/ac/', include('accounts.urls')),
+    path('contact/ac/', include('accounts.urls')),
+    path('mm/', views.makemoney),
+    #path('contact/', views.contact),
+    path('', views.home)
     #Alim
 
     #Rakib

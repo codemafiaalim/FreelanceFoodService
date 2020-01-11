@@ -1,2 +1,30 @@
-#This will be used to copy paste texts
+python manage.py makemigrations
+python manage.py migrate
 python manage.py runserver
+
+----------------------------
+python manage.py runserver
+python manage.py createsuperuser
+python manage.py startapp Picz
+---------------------------- test
+pip install pytest
+pip install pytest-cov
+pip install pytest mixer
+----------------------------migrattions
+pip install Pillow
+python manage.py makemigrations
+python manage.py migrate
+python manage.py sqlmigrate stores2 0003
+-----------------------------dump data
+python manage.py dumpdata stores2 temp_data.json
+python manage.py sqlclear stores2 | python manage.py dbshell
+python manage.py syncdb
+python manage.py loaddata temp_data.json
+-----------------------------venv
+pip install virtualenvwrapper-win
+mkvirtualenv vnv2
+pip install django
+D:\CODES\vProjects\venv\Scripts\activate
+--------------------------idk
+pip install pylint-django
+settings.AUTH_USER_MODEL,
